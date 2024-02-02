@@ -1,0 +1,13 @@
+<script>
+// 监听整个文档的点击事件
+document.addEventListener('click', function(e) {
+    // 延迟检查，以便让URL变化生效
+    setTimeout(function() {
+        // 检查当前URL是否为目标URL
+        if (window.location.href.includes('?model=gpt-4')) {
+            // 执行重定向
+            window.location.href = window.location.href.replace('?model=gpt-4', '?model=gpt-4-mobile');
+        }
+    }, 10); // 延迟10毫秒应足以让大多数URL变化生效
+});
+</script>
